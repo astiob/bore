@@ -1,14 +1,8 @@
-name: Build (Windows / MSYS2)
+name: Nonscheduled build (Windows / MSYS2)
 
 on:
   push:
-    paths:
-      - 'src/*'
-      - 'meson.build'
-      - '.github/workflows/windows.yml'
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 1 * *"
+    branches: [reg-ci]
 
 jobs:
   build-windows:
